@@ -150,3 +150,30 @@ Check list
 - 공통된 코드를 첫 번째 클래스(Dollar)에서 상위 클래스(Money)로 단계적으로 옮겼다.
 - 두 번째 클래스(Franc)도 Money의 하위 클래스로 만들었다.
 - 불필요한 구현을 제거하기 전에 두 equals() 구현을 일치시켰다.
+
+### **Chapter 7. 사과와 오렌지**
+
+Dollar와 Franc은 다른 화폐이다.
+하지만 우리의 equals() 함수는? 고쳐야 한다.
+
+Check list
+- [ ] $5 + 10CHF = $10(환율이 2:1)
+- [x] $5 x 2 = $10
+- [x] amount를 private으로 만들기
+- [x] Dollar 부작용?
+- [ ] Money 반올림?
+- [x] equals()
+- [ ] hashCdoe()
+- [ ] Equal Null
+- [ ] Equal Object
+- [x] 5CHF x 2 = 10CHF
+- [ ] Dollar/Franc 중복
+- [x] 공용 equals
+- [ ] 공용 times
+- [x] Dollar / Franc 비교하기
+- [ ] 통화?
+
+지금까지 한 작업
+- 우릴 괴롭히던 결함을 끄집어내서 텍스트에 담아냈다.
+- 완벽하진 않지만 그럭저럭 봐줄 만한 방법(getClass())으로 테스트를 통과하게 만들었다.
+- 더 많은 동기가 있기 전에는 더 많은 설계를 도입하지 않기로 했다.
