@@ -6,10 +6,10 @@ public class MoneyTest {
 
     @Test
     public void testEquality() {
-        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
-        assertThat(new Dollar(5).equals(new Dollar(6))).isFalse();
-        assertThat(new Franc(5).equals(new Franc(5))).isTrue();
-        assertThat(new Franc(5).equals(new Franc(6))).isFalse();
-        assertThat(new Dollar(5).equals(new Franc(5))).isFalse();
+        assertThat(Money.dollar(5).equals(Money.dollar(5))).isTrue();
+        assertThat(Money.dollar(5).equals(Money.dollar(6))).isFalse();
+        assertThat(Money.franc(5).equals(Money.franc(5))).isTrue();
+        assertThat(Money.franc(5).equals(Money.franc(6))).isFalse();
+        assertThat(Money.dollar(5).equals(Money.franc(5))).isFalse();
     }
 }
