@@ -123,3 +123,30 @@ Check list
 
 1~4 단계는 빠른 속도로 진행.
 5단계에서 적절한 설계, 올바른 코드를 만들어야 한다.
+
+### **Chapter 6. 돌아온 '모두를 위한 평등'**
+
+equals() 함수의 중복을 줄이기 위한 방법 필요하다.
+중복을 줄이기 위해서는 상속을 사용하는 것이 좋지만, Dollar, Franc 두 클래스 중 하나가 상위 클래스가 되는 것이 아닌
+공통된 상위 클래스를 생성하는 것이 바람직하다.
+
+Check list
+- [ ] $5 + 10CHF = $10(환율이 2:1)
+- [x] $5 x 2 = $10
+- [x] amount를 private으로 만들기
+- [x] Dollar 부작용?
+- [ ] Money 반올림?
+- [x] equals()
+- [ ] hashCdoe()
+- [ ] Equal Null
+- [ ] Equal Object
+- [x] 5CHF x 2 = 10CHF
+- [ ] Dollar/Franc 중복
+- [x] 공용 equals
+- [ ] 공용 times
+- [ ] Dollar / Franc 비교하기
+
+지금까지 한 작업
+- 공통된 코드를 첫 번째 클래스(Dollar)에서 상위 클래스(Money)로 단계적으로 옮겼다.
+- 두 번째 클래스(Franc)도 Money의 하위 클래스로 만들었다.
+- 불필요한 구현을 제거하기 전에 두 equals() 구현을 일치시켰다.
