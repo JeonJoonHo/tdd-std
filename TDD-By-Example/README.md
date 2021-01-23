@@ -376,3 +376,21 @@ Check list
 ```
 좀 전에 우리가 발견한 내용을 나중에 코드를 읽어볼 다른 사람들에게도 알려 주기 위해 테스트로 만들어 두자.
 ```
+
+### **Chapter 15. 서로 다른 통화 더하기**
+
+Check list
+- [x] $5 + 10CHF = $10(환율이 2:1)
+- [x] $5 + $5 = $10
+- [ ] $5 + $5에서 Money 반환하기
+- [x] Bank.reduce(Money)
+- [x] Money에 대한 통화 변환을 수행하는 Reduce
+- [x] Reduce(Bank, String)기
+- [ ] Sum.plus
+- [ ] Expression.times
+
+지금까지 한 작업
+- 원하는 테스트를 작성하고, 한 단계에 달성할 수 있도록 뒤로 물렀다.
+- 좀더 추상적인 선언을 통해 가지에서 뿌리(애초의 테스트 케이스)로 일반화했다.
+- 변경 후 (Expression fiveBucks), 그 영향을 받은 다른 부분들을 변경하기 위해 컴파일러의 지시를 따랐다(Expression에 plus()를 추가하기 등등).
+

@@ -20,10 +20,6 @@ class Money implements Expression {
     }
 
 
-    Money times(int multiplier) {
-        return new Money(this.amount * multiplier, currency);
-    }
-
     public boolean equals(Object object) {
         Money money = (Money) object;
         return this.amount == money.amount
@@ -34,7 +30,11 @@ class Money implements Expression {
         return amount + " " + currency;
     }
 
-    public Expression plus(Money addend) {
+    public Expression times(int multiplier) {
+        return new Money(this.amount * multiplier, currency);
+    }
+
+    public Expression plus(Expression addend) {
         return new Sum(this, addend);
     }
 
