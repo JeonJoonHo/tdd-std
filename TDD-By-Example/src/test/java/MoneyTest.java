@@ -17,4 +17,13 @@ public class MoneyTest {
         assertThat(fiveDollar.times(2)).isEqualTo(Money.dollar(10));
         assertThat(fiveDollar.times(3)).isEqualTo(Money.dollar(15));
     }
+
+    @Test
+    public void testSimpleAddition() {
+        Money five = Money.dollar(5);
+        Expression sum = five.plus(five);
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+        assertThat(Money.dollar(10)).isEqualTo(reduced);
+    }
 }
